@@ -1,3 +1,5 @@
 *.lock
+.vs/
+.vs/*
 /LojaWeb.Mvc/bin/*
 /LojaWeb.Mvc/obj/*

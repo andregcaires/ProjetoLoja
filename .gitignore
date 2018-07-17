@@ -1,0 +1,3 @@
+*.lock
+/LojaWeb.Mvc/bin/*
+/LojaWeb.Mvc/obj/*

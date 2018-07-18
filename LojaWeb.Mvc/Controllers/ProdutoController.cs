@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using LojaWeb.Mvc.Models;
+using System.Net;
 
 namespace LojaWeb.Mvc.Controllers
 {
@@ -26,18 +27,26 @@ namespace LojaWeb.Mvc.Controllers
         }
 
         // GET: Produto/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-            Produto item = repo.Detalhes(id);
-            if (item != null)
+            if(id == null)
             {
-                return View(item);
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             else
             {
-                return RedirectToAction("Index");
+                Produto item = repo.Detalhes(id);
+                if (item != null)
+                {
+                    return HttpNotFound();
+                }
+                else
+                {
+                    return View(item);
+                }
+
             }
-            
+
         }
 
         // GET: Produto/Create
@@ -72,20 +81,40 @@ namespace LojaWeb.Mvc.Controllers
         }
 
         // GET: Produto/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            else
+            {
+                Produto item = repo.Detalhes(id);
+                if (item != null)
+                {
+                    return new HttpNotFoundResult();
+                }
+                else
+                {
+                    return View(item);
+                }
+            }
         }
 
         // POST: Produto/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Produto item)
         {
             try
             {
-                // TODO: Add update logic here
+                if(ModelState.IsValid)
+                {
+                    repo.Editar(item);
+                    return RedirectToAction("Index");
+                }
 
-                return RedirectToAction("Index");
+
+                return View(item);
             }
             catch
             {
@@ -94,24 +123,48 @@ namespace LojaWeb.Mvc.Controllers
         }
 
         // GET: Produto/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            else
+            {
+                Produto item = repo.Detalhes(id);
+                if (item != null)
+                {
+                    return new HttpNotFoundResult();
+                }
+                else
+                {
+                    return View(item);
+                }
+            }
         }
 
         // POST: Produto/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, Produto item)
         {
             try
             {
-                // TODO: Add delete logic here
+                if (ModelState.IsValid)
+                {
+                    repo.Deletar(item);
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    //
+                    return View(item);
+                }
 
-                return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                //
+                return View(item);
             }
         }
     }

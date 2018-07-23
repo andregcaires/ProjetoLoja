@@ -57,6 +57,7 @@ namespace LojaWeb.Mvc.Controllers
 
         // POST: Produto/Create
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(Produto item)
         {
             try
@@ -103,6 +104,7 @@ namespace LojaWeb.Mvc.Controllers
 
         // POST: Produto/Edit/5
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, Produto item)
         {
             try
@@ -145,13 +147,14 @@ namespace LojaWeb.Mvc.Controllers
 
         // POST: Produto/Delete/5
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, Produto item)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    repo.Deletar(item);
+                    repo.Deletar(id, item);
                     return RedirectToAction("Index");
                 }
                 else

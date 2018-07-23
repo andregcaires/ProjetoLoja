@@ -11,10 +11,10 @@ namespace LojaWeb.Mvc.Repository
 
         void Inserir(T item);
 
-        Produto Detalhes(int? id);
+        T Detalhes(int? id);
 
         void Editar(T item);
 
-        void Deletar(T item);
+        void Deletar(int id, T item);
     }
 }

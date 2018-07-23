@@ -17,9 +17,11 @@ namespace LojaWeb.Mvc.Repository
             _db = new LojaContext();
         }
 
-        public void Deletar(Produto item)
+        public void Deletar(int id, Produto item)
         {
-            _db.Entry(item).State = EntityState.Deleted;
+            //_db.Entry(item).State = EntityState.Deleted;
+            item = _db.Produto.Find(id);
+            _db.Produto.Remove(item);
             _db.SaveChanges();
         }
 

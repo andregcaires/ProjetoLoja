@@ -5,10 +5,6 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaWeb.Mvc", "LojaWeb.Mvc\LojaWeb.Mvc.csproj", "{75D78B2B-589D-4A0D-9220-4AD499E22241}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaWeb.Forms", "LojaWeb.Forms\LojaWeb.Forms.csproj", "{3402749D-2BA2-48FB-B8F4-A0C0E7FFB041}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaWeb.Forms.Tests", "LojaWeb.Forms.Tests\LojaWeb.Forms.Tests.csproj", "{423974B1-E860-4EBB-B417-A310A38DC985}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{75D78B2B-589D-4A0D-9220-4AD499E22241}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75D78B2B-589D-4A0D-9220-4AD499E22241}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75D78B2B-589D-4A0D-9220-4AD499E22241}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3402749D-2BA2-48FB-B8F4-A0C0E7FFB041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3402749D-2BA2-48FB-B8F4-A0C0E7FFB041}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3402749D-2BA2-48FB-B8F4-A0C0E7FFB041}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3402749D-2BA2-48FB-B8F4-A0C0E7FFB041}.Release|Any CPU.Build.0 = Release|Any CPU
-		{423974B1-E860-4EBB-B417-A310A38DC985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{423974B1-E860-4EBB-B417-A310A38DC985}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{423974B1-E860-4EBB-B417-A310A38DC985}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{423974B1-E860-4EBB-B417-A310A38DC985}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

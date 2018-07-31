@@ -197,10 +197,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Context\LojaContext.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProdutoController.cs" />
-    <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\TipoDocumentoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -212,6 +212,14 @@
     <Compile Include="Migrations\201807261257101_Novo-Banco.cs" />
     <Compile Include="Migrations\201807261257101_Novo-Banco.Designer.cs">
       <DependentUpon>201807261257101_Novo-Banco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807311526118_AtualizacaoFuncionario.cs" />
+    <Compile Include="Migrations\201807311526118_AtualizacaoFuncionario.Designer.cs">
+      <DependentUpon>201807311526118_AtualizacaoFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807311531580_AtualizacaoDescricaoTipoDOc.cs" />
+    <Compile Include="Migrations\201807311531580_AtualizacaoDescricaoTipoDOc.Designer.cs">
+      <DependentUpon>201807311531580_AtualizacaoDescricaoTipoDOc.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -293,10 +301,19 @@
     <Content Include="Views\Produto\Details.cshtml" />
     <Content Include="Views\Produto\Edit.cshtml" />
     <Content Include="Views\Produto\Delete.cshtml" />
+    <Content Include="Views\TipoDocumento\Index.cshtml" />
+    <Content Include="Views\TipoDocumento\Delete.cshtml" />
+    <Content Include="Views\TipoDocumento\Edit.cshtml" />
+    <Content Include="Views\TipoDocumento\Details.cshtml" />
+    <Content Include="Views\Funcionario\Delete.cshtml" />
+    <Content Include="Views\Funcionario\Edit.cshtml" />
+    <Content Include="Views\Funcionario\Details.cshtml" />
+    <Content Include="Views\TipoDocumento\Create.cshtml" />
+    <Content Include="Views\Funcionario\Index.cshtml" />
+    <Content Include="Views\Funcionario\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\TipoDocumento\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -317,6 +334,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807261257101_Novo-Banco.resx">
       <DependentUpon>201807261257101_Novo-Banco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311526118_AtualizacaoFuncionario.resx">
+      <DependentUpon>201807311526118_AtualizacaoFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311531580_AtualizacaoDescricaoTipoDOc.resx">
+      <DependentUpon>201807311531580_AtualizacaoDescricaoTipoDOc.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

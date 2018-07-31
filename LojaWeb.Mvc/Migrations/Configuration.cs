@@ -10,7 +10,6 @@ namespace LojaWeb.Mvc.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "LojaWeb.Mvc.Context.LojaContext";
         }
 
         protected override void Seed(LojaWeb.Mvc.Context.LojaContext context)

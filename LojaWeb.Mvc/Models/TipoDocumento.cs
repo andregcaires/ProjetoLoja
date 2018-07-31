@@ -11,7 +11,7 @@ namespace LojaWeb.Mvc.Models
         [Key]
         public int TipoDocumentoId { get; set; }
 
-        public int Descricao { get; set; }
+        public string Descricao { get; set; }
 
         public virtual ICollection<Funcionario> Funcionarios { get; set; }
     }

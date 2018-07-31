@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using LojaWeb.Mvc.Models;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace LojaWeb.Mvc.Context
 {
@@ -15,5 +16,10 @@ namespace LojaWeb.Mvc.Context
 
         public DbSet<Funcionario> Funcionario { get; set; }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            // remove a conveção Cascade da deleção One To Many
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+        }
     }
 }

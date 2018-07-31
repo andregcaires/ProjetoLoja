@@ -5,6 +5,7 @@ using System.Text;
 using LojaWeb.Mvc.Context;
 using LojaWeb.Mvc.Models;
 using System.Data.Entity;
+using System.Web.Mvc;
 
 namespace LojaWeb.Mvc.Repository
 {
@@ -44,7 +45,13 @@ namespace LojaWeb.Mvc.Repository
 
         public List<Funcionario> Listar()
         {
-            return _db.Funcionario.ToList();
+            // preenche o campo TipoDocumento
+            return _db.Funcionario.Include(f => f.TipoDocumento).ToList();
+        }
+
+        public SelectList PreencheTipoDocumento()
+        {
+            return new SelectList(_db.TipoDocumento, "TipoDocumentoId", "Descricao");
         }
     }
 }

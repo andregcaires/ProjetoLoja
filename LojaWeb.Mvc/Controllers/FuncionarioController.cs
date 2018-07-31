@@ -52,6 +52,7 @@ namespace LojaWeb.Mvc.Controllers
         // GET: Funcionario/Create
         public ActionResult Create()
         {
+            ViewBag.TipoDocumentoId = repo.PreencheTipoDocumento();
             return View();
         }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -39,6 +40,7 @@ namespace LojaWeb.Mvc.Models
         [Display(Name = "Tipo de Documento")]
         public int TipoDocumentoId { get; set; }
 
+        [NotMapped]
         public int Idade { get {
                 return DateTime.Now.Year - DataNascimento.Year;
             } }

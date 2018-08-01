@@ -29,7 +29,7 @@ namespace LojaWeb.Mvc.Controllers
         // GET: Produto/Details/5
         public ActionResult Details(int? id)
         {
-            if(id == null)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -72,7 +72,7 @@ namespace LojaWeb.Mvc.Controllers
                     @ViewBag.Mensagem = "Erro ao tentar inserir";
                     return View(item);
                 }
-                
+
             }
             catch
             {
@@ -109,7 +109,7 @@ namespace LojaWeb.Mvc.Controllers
         {
             try
             {
-                if(ModelState.IsValid)
+                if (ModelState.IsValid)
                 {
                     repo.Editar(item);
                     return RedirectToAction("Index");

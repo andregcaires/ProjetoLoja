@@ -18,5 +18,7 @@ namespace LojaWeb.Mvc.Models
         public DateTime UltimaCompra { get; set; }
 
         public int Estoque { get; set; }
+
+        public virtual ICollection<FornecedorProduto> FornecedorProdutos { get; set; }
     }
 }

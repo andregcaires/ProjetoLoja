@@ -22,7 +22,15 @@ namespace LojaWeb.Mvc.Repository
             //_db.Entry(item).State = EntityState.Deleted;
             item = _db.TipoDocumento.Find(id);
             _db.TipoDocumento.Remove(item);
-            _db.SaveChanges();
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Erro: "+e.Message);
+                //throw;
+            }
         }
 
         public TipoDocumento Detalhes(int? id)

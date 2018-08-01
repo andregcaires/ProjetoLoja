@@ -21,5 +21,7 @@ namespace LojaWeb.Mvc.Context
             // remove a conveção Cascade da deleção One To Many
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
         }
+
+        public System.Data.Entity.DbSet<LojaWeb.Mvc.Models.Fornecedor> Fornecedors { get; set; }
     }
 }

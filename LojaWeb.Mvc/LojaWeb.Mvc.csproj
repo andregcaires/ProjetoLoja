@@ -206,24 +206,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807171724239_InitialCreate.cs" />
-    <Compile Include="Migrations\201807171724239_InitialCreate.Designer.cs">
-      <DependentUpon>201807171724239_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807261257101_Novo-Banco.cs" />
-    <Compile Include="Migrations\201807261257101_Novo-Banco.Designer.cs">
-      <DependentUpon>201807261257101_Novo-Banco.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311526118_AtualizacaoFuncionario.cs" />
-    <Compile Include="Migrations\201807311526118_AtualizacaoFuncionario.Designer.cs">
-      <DependentUpon>201807311526118_AtualizacaoFuncionario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807311531580_AtualizacaoDescricaoTipoDOc.cs" />
-    <Compile Include="Migrations\201807311531580_AtualizacaoDescricaoTipoDOc.Designer.cs">
-      <DependentUpon>201807311531580_AtualizacaoDescricaoTipoDOc.cs</DependentUpon>
+    <Compile Include="Migrations\201808011912426_init.cs" />
+    <Compile Include="Migrations\201808011912426_init.Designer.cs">
+      <DependentUpon>201808011912426_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Customizar.cs" />
     <Compile Include="Models\Fornecedor.cs" />
     <Compile Include="Models\FornecedorProduto.cs" />
     <Compile Include="Models\Funcionario.cs" />
@@ -337,17 +326,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807171724239_InitialCreate.resx">
-      <DependentUpon>201807171724239_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807261257101_Novo-Banco.resx">
-      <DependentUpon>201807261257101_Novo-Banco.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311526118_AtualizacaoFuncionario.resx">
-      <DependentUpon>201807311526118_AtualizacaoFuncionario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311531580_AtualizacaoDescricaoTipoDOc.resx">
-      <DependentUpon>201807311531580_AtualizacaoDescricaoTipoDOc.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808011912426_init.resx">
+      <DependentUpon>201808011912426_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
